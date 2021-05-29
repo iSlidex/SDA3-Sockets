@@ -99,8 +99,7 @@ def main(argv):
                             print('Mensaje enviado: givememsg ' + str(client_udp_port))
                             data, addr = udp.recvfrom((int(msglen))*2)
                             count = count - 1
-                            if data:
-                                print(data)
+                            if data:    
                                 proc_data = (base64.b64decode(data)).decode('utf-8')
                                 print('Mensaje recibido: ' + proc_data)
                                 md5meker = md5()
